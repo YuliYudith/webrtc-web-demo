@@ -4,7 +4,13 @@ import firebase from 'firebase/app';
 import 'firebase/firestore';
 
 const firebaseConfig = {
-  // your config
+  apiKey: "AIzaSyC8pQvu8FEqaXiPkVPPE1-igiwGPa_5z3w",
+  authDomain: "vetcic-94118.firebaseapp.com",
+  projectId: "vetcic-94118",
+  storageBucket: "vetcic-94118.appspot.com",
+  messagingSenderId: "658030428499",
+  appId: "1:658030428499:web:5e086ce69234cf8d6b21a6",
+  measurementId: "G-N56K27YVKP"
 };
 
 if (!firebase.apps.length) {
@@ -38,6 +44,7 @@ const hangupButton = document.getElementById('hangupButton');
 // 1. Setup media sources
 
 webcamButton.onclick = async () => {
+  console.log("hello")
   localStream = await navigator.mediaDevices.getUserMedia({ video: true, audio: true });
   remoteStream = new MediaStream();
 
